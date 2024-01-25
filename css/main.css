@@ -1,0 +1,536 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 971px;
+  overflow: hidden;
+}
+
+/* ---------- ნავიგაცია --------- */
+
+header {
+  background-color: #1a1e1f;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  width: 200px;
+  height: 70px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: transform 0.3s ease;
+}
+
+#bar-top {
+  width: 12.5px;
+}
+
+#bar-bottom {
+  width: 12.5px;
+  transform: translateX(12.5px);
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 24px;
+  color: white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "BPG Arial Caps", sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+  color: #04aef1;
+}
+
+nav ul li a:hover {
+  color: #04aef1;
+}
+
+
+/* --------- ბანერი ---------- */
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 40%;
+  color: white;
+  font-family: "BPG Arial Caps", sans-serif;
+  font-weight: bold;
+}
+
+.banner-text h1 {
+  font-size: 2.5vw;
+}
+
+.banner-text h2 {
+  font-size: 1.5vw;
+  margin-top: 1vw;
+}
+
+/* --------- პროექტის შესახებ ---------- */
+
+.about {
+  font-family: "BPG Arial Caps", sans-serif;
+  background-color: #2b2b2b;
+  padding: 60px 0;
+}
+
+.about span {
+  font-size: 28px;
+  color: white;
+  line-height: 1.6em;
+  display: block;
+}
+
+.about a {
+  color: #04aef1;
+  text-decoration: none;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 40px;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.about a:hover {
+  color: rgb(171, 171, 171);
+}
+
+/* --------- კურსები ---------- */
+
+.courses {
+  background-color: #161616;
+  color: white;
+  font-family: "BPG Arial Caps", sans-serif;
+  padding: 45px 0;
+}
+
+.courses .intro {
+  font-size: 24px;
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 20px;
+}
+
+.course-card {
+  border: solid rgb(171, 171, 171) 0.1px;
+  border-radius: 5px;
+}
+
+.course-img {
+  border-radius: inherit;
+  display: block;
+}
+
+.card-content {
+  padding: 19px;
+}
+
+.card-name {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.reg-status {
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.course-details {
+  margin-bottom: 125px;
+}
+
+.card-content a {
+  display: inline-block;
+  color: #04aef1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-content a:hover {
+  color: #0575a2;
+}
+
+.card-link img {
+  width: 25px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+/* --------- სლაიდერი ---------- */
+
+.slider {
+  background-color: #2b2b2b;
+  color: white;
+  font-family: "BPG Arial Caps", sans-serif;
+  font-size: 24px;
+  padding: 65px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.arrow svg {
+  fill: white;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.arrow svg:hover {
+  fill: rgb(171, 171, 171);
+}
+
+.arrow-left {
+  margin-left: 60px;
+}
+
+.arrow-right {
+  margin-right: 60px;
+  transform: scaleX(-1);
+}
+
+.slider-content {
+  display: flex;
+  justify-content: space-between;
+  transition: opacity 0.5s ease-in-out;
+  margin: 70px 0;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #555;
+}
+
+.slider-content img {
+  object-fit: contain;
+  width: 90%;
+}
+
+.partner {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  padding: 20px;
+}
+
+.slider-content.fade-in {
+  opacity: 1;
+}
+
+.slider-content.fade-out {
+  opacity: 0;
+}
+
+/* --------- FAQ ---------- */
+
+.faq {
+  background-color: #161616;
+  font-family: "BPG Arial Caps", sans-serif;
+  color: white;
+  padding: 100px;
+}
+
+.faq-intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-intro a {
+  color: #04aef1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 24px;
+}
+
+.faq-intro a:hover {
+  color: rgb(171, 171, 171);
+}
+
+.questions-container {
+  margin-top: 30px;
+}
+
+.question-content {
+  border-bottom: 1px solid rgb(53, 49, 49);
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.question {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.arrow-down {
+  width: 15px;
+}
+
+.arrow-rotate {
+  transform: scaleY(-1);
+}
+
+.arrow-down svg {
+  fill: white;
+  cursor: pointer;
+}
+
+.answer {
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.answer.active {
+  max-height: 5000px;
+}
+
+/* --------- Footer ---------- */
+
+footer {
+  background-color: #1a1e1f;
+  color: white;
+  font-family: "BPG Arial Caps", sans-serif;
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.terms {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 25px;
+}
+
+.terms a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.terms a:hover {
+  color: rgb(171, 171, 171);
+}
+
+.contact {
+  display: grid;
+  gap: 40px;
+  text-align: right;
+}
+
+.contact a {
+  color: white;
+  background-color: #00aef3;
+  text-decoration: none;
+  padding: 14px 35px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  color: black;
+  background-color: gray;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 1050px) {
+  .container {
+    width: 87%;
+  }
+
+  .courses {
+    text-align: center;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    width: 305px;
+    margin: 0 auto;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    position: sticky;
+  }
+
+  .main-banner {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 836px) {
+  header {
+    position: sticky;
+  }
+
+  .main-banner {
+    margin-top: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    z-index: 1000;
+  }
+
+  .nav-list {
+    transition: width 0.3s ease;
+    display: none;
+  }
+
+  .nav-list.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #333;
+    justify-content: flex-start;
+    padding-top: 100px;
+    align-items: end;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  #menuIcon.open #bar-top {
+    transform: rotate(45deg) translate(4px, 2px) scaleY(1.2);
+  }
+  #menuIcon.open #bar-middle {
+    transform: rotate(-45deg);
+  }
+  #menuIcon.open #bar-bottom {
+    transform: rotate(45deg) translate(5.5px, -11.5px) scaleY(1.2);
+  }
+
+  .nav-list li {
+    margin: 24px;
+    text-align: center;
+  }
+
+  .slider-content {
+    display: block;
+    text-align: center;
+  }
+
+  .slider-content img {
+    width: 70%;
+  }
+
+  .partner {
+    padding: 50px;
+  }
+
+  .faq {
+    position: relative;
+  }
+
+  .faq-intro a {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .question h3 {
+    font-size: 4vw;
+  }
+
+  .arrow-down {
+    width: 40px;
+  }
+
+  .contact a {
+    padding: 10px 10px;
+  }
+}
