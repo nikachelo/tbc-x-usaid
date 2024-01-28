@@ -15,8 +15,14 @@ const partnersData = [
 
 /* ------ დასასრული ------ */
 
+//თითო გვერდზე პარტნიორების რაოდენობა
+
 const partnersPerPage = 3;
+
+//სულ სლაიდერების რაოდენობა
 const totalSlides = Math.ceil(partnersData.length / partnersPerPage);
+
+//სლაიდების გენერირება
 const slides = [];
 for (let i = 0; i < totalSlides; i++) {
   slides.push(

@@ -1,8 +1,11 @@
 /*------Faq JS------*/
 
 document.addEventListener("DOMContentLoaded", function () {
+  //ყველა კითხვა
+
   const questions = document.querySelectorAll(".question");
 
+  //კითხვებზე ივენთის დამატება
   questions.forEach((question) => {
     question.addEventListener("click", function () {
       questions.forEach((q) => {
@@ -24,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
       });
-
+      //აქტიური კითხვა
       this.classList.toggle("active");
       const answer = this.nextElementSibling;
       const arrow = this.querySelector(".arrow-down svg");
@@ -44,12 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const navList = document.getElementById("navList");
   const body = document.body;
 
+  //მენიუს დახურვის ფუნქციონალი
   function closeMenu() {
     navList.classList.remove("show");
     body.classList.remove("no-scroll");
     menuIcon.classList.remove("open");
   }
 
+  //კლიკის ივენთი
   menuIcon.addEventListener("click", function () {
     menuIcon.classList.toggle("open");
     navList.classList.toggle("show");
