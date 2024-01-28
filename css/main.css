@@ -86,7 +86,6 @@ nav ul li a:hover {
   color: #04aef1;
 }
 
-
 /* --------- ბანერი ---------- */
 
 .main-banner {
@@ -97,8 +96,9 @@ nav ul li a:hover {
 
 .main-banner img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .banner-text {
@@ -254,9 +254,11 @@ nav ul li a:hover {
 
 .slider-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  min-width: 900px;
   transition: opacity 0.5s ease-in-out;
   margin: 70px 0;
+  align-items: center;
 }
 
 .pagination {
@@ -433,6 +435,16 @@ footer {
   .arrow {
     display: none;
   }
+
+  .main-banner {
+    height: 500px;
+  }
+  .banner-text h1 {
+    font-size: 7.5vw;
+  }
+  .banner-text h2 {
+    font-size: 3.5vw;
+  }
 }
 
 @media (max-width: 920px) {
@@ -442,6 +454,9 @@ footer {
 
   .main-banner {
     margin-top: 0;
+  }
+  .slider-content {
+    min-width: initial;
   }
 }
 
@@ -532,5 +547,14 @@ footer {
 
   .contact a {
     padding: 10px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-banner h1 {
+    font-size: 12.5vw;
+  }
+  .main-banner h2 {
+    font-size: 7vw;
   }
 }
