@@ -513,8 +513,10 @@ footer {
   }
 
   .slider-content {
-    display: block;
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    min-height: 600px;
   }
 
   .slider-content img {
@@ -522,6 +524,7 @@ footer {
   }
 
   .partner {
+    width: 50%;
     padding: 50px;
   }
 
